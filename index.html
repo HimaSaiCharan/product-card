@@ -24,12 +24,15 @@
         border-top: 4px solid var(--color1);
         padding: 20px 40px;
       }
-      .inline {
-        display: inline;
+      .inline-block {
+        display: inline-block;
       }
       nav {
         float: right;
-        margin: 8px 20px 0 0;
+        margin-right: 20px;
+      }
+      nav #nav-options {
+        margin-top: 8px;
       }
       .back {
         margin-right: 40px;
@@ -43,15 +46,19 @@
       .content,
       .button,
       .rating,
-      .image,
-      .navigation li a {
+      figure,
+      .options li a {
         border-radius: 15px;
       }
       .card {
+        margin: 1.5%;
         padding: 10px;
-        width: 500px;
+        width: 30%;
         background-color: var(--color2);
         border: 2px solid var(--color1);
+      }
+      .card:hover {
+        box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4);
       }
       .product-brand {
         color: rgba(255, 255, 255, 0.6);
@@ -61,16 +68,15 @@
         font-size: 26px;
         font-weight: 500;
       }
-      .image {
-        background-image: url("https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/y/u/o/-original-imagp2c6scag8dzw.jpeg?q=90&crop=false");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+      figure {
         margin: 10px auto;
         width: 250px;
         height: 300px;
         overflow: scroll;
         border: 2px solid #3a5a40;
+      }
+      figure img {
+        width: 100%;
       }
       .content {
         margin: 20px 0;
@@ -133,24 +139,24 @@
         color: white;
       }
       .color {
-        padding: 1px;
+        padding: 2px;
         border-radius: 50%;
         border: 2px solid white;
         margin: 0 10px;
       }
       .sizes {
-        margin: 0 14px 0 14px;
+        margin: 0 14px;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1 class="inline">
+      <h1 class="inline-block">
         <a href="" class="back">&lt;</a>
         Products
       </h1>
       <nav>
-        <ul class="options navigation inline">
+        <ul class="options inline-block" id="nav-options">
           <li><a href="">Wishlist</a></li>
           <li><a href="">Orders</a></li>
           <li><a href="">Account</a></li>
@@ -158,20 +164,117 @@
       </nav>
     </header>
     <main>
-      <div class="card">
-        <div class="image"></div>
+      <div class="card inline-block">
+        <figure title="Nike Shoes">
+          <img
+            src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/y/u/o/-original-imagp2c6scag8dzw.jpeg?q=70&crop=false"
+            alt="Nike Shoes img  1"
+          />
+          <img
+            src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/r/v/8/-original-imahyvv5zyyqktbp.jpeg?q=70&crop=false"
+            alt="Nike Shoes img  2"
+          />
+          <img
+            src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/2/r/g/13-dm9537-001-13-nike-black-white-wolf-grey-original-imaguy5jxj3twez6.jpeg?q=70&crop=false"
+            alt="Nike Shoes img  3"
+          />
+        </figure>
         <section class="content">
-          <h2 class="product-brand">Nike</h2>
-          <p class="product-name">Air Max SYSTM Sneakers For Men</p>
-          <div class="price inline">
-            &#8377;7999
+          <h2 class="product-brand">NIKE</h2>
+          <p class="product-name">Air Max SYSTM Sneakers</p>
+          <div class="price inline-block">
+            &#8377;7,999
             <span class="offer">&#8377;10,999</span>
           </div>
           <span class="rating">4.3 ⭐️</span>
           <ul class="options">
             Available Colors :
-            <li id="black" class="color">⚫️</li>
-            <li id="white" class="color">⚪️</li>
+            <li class="color">⚫️</li>
+            <li class="color">⚪️</li>
+          </ul>
+          <ul class="options">
+            Available Sizes :
+            <li class="sizes">8</li>
+            <li class="sizes">9</li>
+            <li class="sizes">10</li>
+            <li class="sizes">-</li>
+          </ul>
+          <a class="button" href="#">Order Now 💲</a>
+          <a class="button" href="#">Add to cart 🛒</a>
+        </section>
+      </div>
+
+      <div class="card inline-block">
+        <figure title="Puma Shoes">
+          <img
+            src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/4/g/i/-original-imah4syz33zc2ncy.jpeg?q=70&crop=false"
+            alt="Puma shoes img 1"
+          /><img
+            src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/p/i/s/-original-imah4syzjpjmcenh.jpeg?q=70&crop=false"
+            alt="Puma shoes img 2"
+          /><img
+            src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/w/k/v/-original-imah4syz8wcuajwv.jpeg?q=70&crop=false"
+            alt="Puma shoes img 3"
+          />
+        </figure>
+        <section class="content">
+          <h2 class="product-brand">PUMA</h2>
+          <p class="product-name">Zod Runner V3 IDP Casuals</p>
+          <div class="price inline-block">
+            &#8377;1,000
+            <span class="offer">&#8377;3,999</span>
+          </div>
+          <span class="rating">3.9 ⭐️</span>
+          <ul class="options">
+            Available Colors :
+            <li class="color">🔵</li>
+            <li class="color">🟡</li>
+            <li class="color">🔴</li>
+            <li class="color">⚫️</li>
+            <li class="color">⚪️</li>
+          </ul>
+          <ul class="options">
+            Available Sizes :
+            <li class="sizes">6</li>
+            <li class="sizes">-</li>
+            <li class="sizes">8</li>
+            <li class="sizes">9</li>
+            <li class="sizes">10</li>
+          </ul>
+          <a class="button" href="#">Order Now 💲</a>
+          <a class="button" href="#">Add to cart 🛒</a>
+        </section>
+      </div>
+
+      <div class="card inline-block">
+        <figure title="Adidas Shoes">
+          <img
+            src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/x/o/p/-original-imahfrsryykracyh.jpeg?q=70&crop=false"
+            alt="Adidas shoes img 1"
+          />
+          <img
+            src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/a/j/q/-original-imah4aemctsmaxvm.jpeg?q=70&crop=false"
+            alt="Adidas shoes img 2"
+          />
+          <img
+            src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/z/5/x/-original-imah4aemxa5kdeag.jpeg?q=70&crop=false"
+            alt="Adidas shoes img 3"
+          />
+        </figure>
+        <section class="content">
+          <h2 class="product-brand">ADIDAS</h2>
+          <p class="product-name">Harquin M Running Shoes</p>
+          <div class="price inline-block">
+            &#8377;1,920
+            <span class="offer">&#8377;3,999</span>
+          </div>
+          <span class="rating">4.1 ⭐️</span>
+          <ul class="options">
+            Available Colors :
+            <li class="color">⚫️</li>
+            <li class="color">⚪️</li>
+            <li class="color">🟡</li>
+            <li class="color">🔴</li>
           </ul>
           <ul class="options">
             Available Sizes :
