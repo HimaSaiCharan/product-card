@@ -2,6 +2,165 @@
 <html>
   <head>
     <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      :root {
+        --color1: #3a5a40;
+        --color2: #eaf6ea;
+        --color3: #a3b18a;
+      }
+      header {
+        background-color: var(--color2);
+        color: black;
+        border-bottom: 8px double var(--color1);
+        border-top: 8px double var(--color1);
+        box-shadow: 0 2px 4px var(--color1);
+        padding: 20px 40px;
+      }
+      .back {
+        float: left;
+        margin: 4px 40px 0 20px;
+        font-size: 24px;
+        font-weight: 900;
+      }
+      main {
+        padding: 40px;
+      }
+      .card {
+        border-radius: 15px;
+        padding: 10px;
+        width: 500px;
+        background-color: var(--color2);
+        border: 2px solid var(--color1);
+      }
+      .product-brand {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 20px;
+      }
+      .product-name {
+        font-size: 26px;
+        font-weight: 500;
+      }
+      .image {
+        background-image: url("https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/y/u/o/-original-imagp2c6scag8dzw.jpeg?q=90&crop=false");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 14px;
+        margin: 10px auto;
+        width: 250px;
+        height: 300px;
+        overflow: scroll;
+        border: 2px solid #3a5a40;
+      }
+      .content {
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 14px;
+        background-color: var(--color1);
+        color: white;
+      }
+      .content > * {
+        margin: 10px;
+      }
+      .price {
+        font-size: 20px;
+        font-weight: 600;
+        display: inline;
+      }
+      .offer {
+        font-size: 18px;
+        text-decoration: line-through;
+        margin-left: 10px;
+        text-decoration-thickness: 2px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .rating {
+        padding: 4px 10px;
+        display: inline;
+        background-color: white;
+        color: var(--color1);
+        border-radius: 14px;
+        font-weight: 700;
+        margin: 0 20px;
+        font-size: 20px;
+      }
+      .button {
+        text-align: center;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: var(--color1);
+        background-color: #eaf6ea;
+        margin: 10px;
+        border-radius: 14px;
+        font-size: 18px;
+      }
+      .button:hover {
+        background-color: white;
+        color: black;
+      }
+      .list {
+        margin: 20px 10px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .list li {
+        display: inline;
+        text-decoration: none;
+      }
+      .list .color {
+        padding: 1px;
+        border-radius: 50%;
+        border: 2px solid white;
+        margin: 0 10px;
+        font-weight: 400;
+      }
+      .list .size {
+        margin: 0 14px 0 14px;
+        font-weight: 400;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>
+        <span class="back">&lt;</span>
+        Products
+      </h1>
+    </header>
+    <main>
+      <div class="card">
+        <div class="image" id="bg"></div>
+        <section class="content">
+          <h2 class="product-brand">Nike</h2>
+          <p class="product-name">Air Max SYSTM Sneakers For Men</p>
+          <div class="price">
+            &#8377;7999
+            <span class="offer">10,999</span>
+          </div>
+          <p class="rating">4.3 ⭐️</p>
+          <ul class="list">
+            Available Colors :
+            <li id="black" class="color">⚫️</li>
+            <li id="white" class="color">⚪️</li>
+          </ul>
+          <ul class="list">
+            Available Sizes :
+            <li class="size">8</li>
+            <li class="size">9</li>
+            <li class="size">10</li>
+            <li class="size">11</li>
+          </ul>
+          <a class="button" href="#">Order Now 💲</a>
+          <a class="button" href="#">Add to cart 🛒</a>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
